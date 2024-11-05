@@ -1,0 +1,198 @@
+/* Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    font-family: "Monaco", "Courier New", monospace;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  /* Chat Window Wrapper */
+  #chat-app {
+    width: 450px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Title Bar (MacBook-style) */
+  #title-bar {
+    background-color: #444;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  #title-bar .window-controls {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .window-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff5f57;
+    cursor: pointer;
+  }
+  
+  .window-button.yellow {
+    background-color: #ffbd2e;
+  }
+  
+  .window-button.green {
+    background-color: #28c940;
+  }
+  
+  /* Message Area */
+  #messages {
+    padding: 15px;
+    background-color: #1e1e1e;
+    height: 300px;
+    overflow-y: auto;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #333;
+  }
+  
+  #messages::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  #messages::-webkit-scrollbar-track {
+    background: #333;
+  }
+  
+  #messages::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  
+  /* Typing Indicator */
+  #typing-indicator {
+    font-style: italic;
+    color: #888;
+    padding: 10px;
+    display: none;
+  }
+  
+  /* Input Area */
+  #input-area {
+    padding: 15px;
+    background-color: #333;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* Input Fields */
+  #username, #message-input {
+    padding: 10px;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #f0f0f0;
+    width: 100%;
+    outline: none;
+  }
+  
+  #username {
+    max-width: 150px;
+  }
+  
+  /* Profile Picture Upload */
+  #profile-pic {
+    display: none;
+  }
+  
+  /* Send Button */
+  #send-btn {
+    padding: 10px 15px;
+    background-color: #28c940;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #send-btn:hover {
+    background-color: #23a536;
+  }
+  
+  /* Admin Button */
+  #admin-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ff5f57;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  
+  #admin-btn:hover {
+    background-color: #e94d4b;
+  }
+  
+  /* Network Status Indicator */
+  #network-status {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    padding: 5px 10px;
+    background-color: #444;
+    color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+  }
+  
+  #network-status span {
+    margin-left: 5px;
+  }
+  
+  /* Animation */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

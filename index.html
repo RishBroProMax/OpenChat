@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>AI Chat BOT</title>
-    <style>
-        /* Basic styling */
-        body { font-family: Arial, sans-serif; background-color: #666666; }
-        #chat { max-width: 600px; margin: 20px auto; padding: 20px; background: #e7e7e7; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        #messages { height: 300px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
-        #username, #messageInput { padding: 8px; width: 100%; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; }
-        .message { padding: 5px; margin-bottom: 5px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Chat App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="chat">
-        <h2>Welcome to Open Chat</h2>
-        <input type="text" id="username" placeholder="Enter your name" />
-        <input type="file" id="profilePic" accept="image/*" />
-        <div id="messages"></div>
-        <input type="text" id="messageInput" placeholder="Type a message..." />
-        <button id="sendBtn">Send</button>
+  <div id="chat-app">
+    <!-- Title Bar -->
+    <div id="title-bar">
+      <div class="window-controls">
+        <div class="window-button red"></div>
+        <div class="window-button yellow"></div>
+        <div class="window-button green"></div>
+      </div>
+      <div class="title">Super Chat Terminal</div>
     </div>
 
-    <script src="client.js"></script>
+    <!-- Messages Area -->
+    <div id="messages" class="fade-in"></div>
+    <div id="typing-indicator">Someone is typing...</div>
+
+    <!-- Input Area -->
+    <div id="input-area">
+      <input type="text" id="username" placeholder="Enter your name" />
+      <input type="file" id="profile-pic" />
+      <input type="text" id="message-input" placeholder="Type a message" />
+      <button id="send-btn">Send</button>
+    </div>
+  </div>
+
+  <!-- Admin Button -->
+  <button id="admin-btn">A</button>
+
+  <!-- Network Status -->
+  <div id="network-status">
+    <span>Connected</span>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

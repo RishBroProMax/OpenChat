@@ -1,4 +1,4 @@
-const ws = new WebSocket('ws://melo.pylex.xyz:9164');
+const ws = new WebSocket('wss://melo.pylex.xyz:9164');
 const messageInput = document.getElementById('message-input');
 const messagesDiv = document.getElementById('messages');
 const typingIndicator = document.getElementById('typing-indicator');
